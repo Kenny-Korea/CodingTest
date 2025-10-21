@@ -37,7 +37,7 @@ export default function Section() {
 
         const filePromises = fileList.map(async (fileName: string) => {
           try {
-            const response = await fetch(`/section${id}/${fileName}`);
+            const response = await fetch(`./section${id}/${fileName}`);
             const text = await response.text();
             return { [fileName]: text };
           } catch (err) {

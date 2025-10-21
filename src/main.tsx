@@ -5,16 +5,23 @@ import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import Section from "./Section.tsx";
 
-const router = createBrowserRouter([
+const isDev = import.meta.env.DEV;
+
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: App,
+    },
+    {
+      path: "/section",
+      Component: Section,
+    },
+  ],
   {
-    path: "/",
-    Component: App,
-  },
-  {
-    path: "/section",
-    Component: Section,
-  },
-]);
+    basename: isDev ? "/" : "/CodingTest",
+  }
+);
 
 createRoot(document.getElementById("root")!).render(
   <RouterProvider router={router} />

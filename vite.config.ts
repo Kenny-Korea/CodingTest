@@ -4,9 +4,11 @@ import tailwindcss from "@tailwindcss/vite";
 import path from "path";
 import { VitePWA } from "vite-plugin-pwa";
 
+const isDev = process.env.NODE_ENV === "development";
+
 // https://vite.dev/config/
 export default defineConfig({
-  base: "/CodingTest/",
+  base: isDev ? "/" : "/CodingTest/",
   plugins: [
     react({
       babel: {

@@ -32,7 +32,7 @@ export default function Section() {
   useEffect(() => {
     const getData = async () => {
       try {
-        const listResponse = await fetch(`/section${id}/files.json`);
+        const listResponse = await fetch(`./section${id}/files.json`);
         const { files: fileList } = await listResponse.json();
 
         const filePromises = fileList.map(async (fileName: string) => {
@@ -183,7 +183,7 @@ export default function Section() {
       <div className="w-full h-full flex flex-row">
         <section className="w-1/2 h-full overflow-y-scroll">
           <Document
-            file={`/section${id}/section${id}.pdf`}
+            file={`./section${id}/section${id}.pdf`}
             onLoadSuccess={onDocumentLoadSuccess}
           >
             {numPages &&

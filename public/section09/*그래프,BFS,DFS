@@ -1,0 +1,13 @@
+G(V, E)
+G: Graph
+V: Vertex - 꼭지점(노드)
+E: Edge - 모서리(연결)
+
+BFS
+- Queue 자료 구조
+- 상태 트리 탐색에 활용
+  - 최단 거리 탐색
+  
+
+DFS
+- Stack 자료 구조(재귀 함수)
